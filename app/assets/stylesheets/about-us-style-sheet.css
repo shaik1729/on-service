@@ -1,0 +1,61 @@
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper {
+    width: 100%;
+}
+
+.profile-contect-wrapper {
+    padding: 30px;
+}
+
+.profile-contect-wrapper h1 {
+    color: lightseagreen;
+}
+
+.two-column-wrapper h2 {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.two-column-wrapper p {
+    margin: 30px;
+    padding: 30px;
+    text-align: justify;
+}
+
+.our-mission p{
+    margin: 30px;
+    padding: 30px;
+    text-align: justify;
+}
+
+.two-column-wrapper img {
+    padding-left: 50px;
+}
+
+.our-mission {
+    padding: 30px;
+}
+
+.our-mission h1 {
+    text-align: center;
+    padding: 30px 30px;
+}
+
+.our-version {
+    text-align: center;
+    padding: 30px 30px;
+}
+
+#profile3{
+    padding: 30px;
+    padding-bottom: 100px;
+    text-align: justify;
+}
+
+#profile3 img{
+    padding-left: 450px;
+}

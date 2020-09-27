@@ -1,0 +1,30 @@
+<header class="site-header">
+    <%= render partial: 'layouts/nav'%>
+    <div class="register">
+        <h2>User Register</h2>
+        <form method="post" id="register" action="login_page">
+            <label>First Name : </label><br>
+            <input type="name" name="Fname" id="name" placeholder="Enter your first name"><br><br>
+            <label>Last Name : </label><br>
+            <input type="name" name="lname" id="name" placeholder="Enter your Last name"><br><br>
+            <label>Mobile number : </label><br>
+            <select id="ph">
+            <option>+91</option>
+            <option>+92</option>
+            <option>+93</option>
+            <option>+94</option>
+            <option>+95</option>
+        </select>
+            <input type="number" name="MNum" id="num" placeholder="Enter your Mobile number"><br><br>
+            <label>Email : </label><br>
+            <input type="Email" name="Email" id="name" placeholder="Enter your Email id"><br><br>
+            <label>Password : </label><br>
+            <input type="text/number" name="Password" id="name" placeholder="Enter your password"><br><br>
+            <label>Re-enter Password : </label><br>
+            <input type="text/number" name="Password" id="name" placeholder="Enter your password"><br><br>
+            <a href="/">
+                <input type="submit" value="submit" id="sub"><br><br>
+            </a>
+        </form>
+    </div>
+</header>

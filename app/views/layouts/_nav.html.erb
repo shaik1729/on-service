@@ -1,0 +1,80 @@
+    <nav>
+        <div class="menu-bar fixed blue">
+            <ul>
+                <li class="<%='active' if params[:controller] == 'visitors' && params[:action] == 'index' %>"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                <li class="<%='active' if params[:controller] == 'visitors' && params[:action] == 'about_html_page' %>"><a href="/about_html_page"><i class="fa fa-user" aria-hidden="true"></i>About us</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="/about_html_page">Team</a></li>
+                            <li><a href="/about_html_page">Version</a></li>
+                            <li>
+                                <a href="/about_html_page">Mission</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="<%='active' if params[:controller] == 'visitors' && params[:action] == 'list-of-services' %>"><a href="/list-of-services"><i class="fa fa-clone" aria-hidden="true"></i>Services</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li class="hover-me">
+                                <a href="/list-of-services">General
+                                    <i class="fa fa-angle-right"
+                                        aria-hidden="true">
+                                    </i>
+                                </a>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li>
+                                            <a href="/list-of-services"></a>Air filter change</li>
+                                        <li>
+                                            <a href="/list-of-services"></a>Fuel filter (diesel) </li>
+                                        <li>
+                                            <a href="/list-of-services"></a>Extensive brake inspection</li>
+                                        <li>
+                                            <a href="/list-of-services"></a>Wheel bearings and shock absorbers inspection</li>
+                                        <li>
+                                            <a href="/list-of-services"></a>Electrical components</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me">
+                                <a href="/list-of-services">Major
+                                    <i class="fa fa-angle-right"
+                                        aria-hidden="true">
+                                    </i>
+                                </a>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li>
+                                            <a href="/list-of-services"></a>Higher resale value</li>
+                                        <li>
+                                            <a href="/list-of-services"></a>More reliable</li>
+                                        <li>
+                                            <a href="/list-of-services"></a>Smoother engine</li>
+                                        <li>
+                                            <a href="/list-of-services"></a>Improved braking</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="<%='active' if params[:controller] == 'visitors' && params[:action] == 'apps' %>"><a href="/apps"><i class="fa fa-users" aria-hidden="true"></i>App</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="/apps">Android app</a></li>
+                            <li><a href="/apps">ios app</a></li>
+                            <li><a href="/apps">Ionic app</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="<%='active' if params[:controller] == 'visitors' && params[:action] == 'contact-us' %>"><a href="/contact-us"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
+                <% if user_signed_in? %>
+                    <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+                <% else %>
+                    <li><i class="fa fa-sign-in" aria-hidden="true"></i><%= link_to 'Sign in', new_user_session_path %></li>
+                    <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign up', new_user_registration_path %></li>
+                <% end %>
+            </ul>
+        </div>
+    </nav>
