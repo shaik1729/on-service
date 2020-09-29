@@ -16,14 +16,15 @@
 }
 
 .two-column-wrapper h2 {
-    padding-top: 150px;
+    /* padding-top: 150px; */
     text-align: center;
+    margin-left: 200px;
 }
 
 .two-column-wrapper p {
-    margin: 30px;
-    padding: 30px;
-    text-align: justify;
+    /* margin: 30px;
+    padding: 30px; */
+    text-align: center;
 }
 
 .our-mission p{
@@ -33,7 +34,7 @@
 }
 
 .two-column-wrapper img {
-    padding-left: 50px;
+    padding-left: 200px;
 }
 
 .our-mission {
@@ -52,10 +53,22 @@
 
 #profile3{
     padding: 30px;
-    padding-bottom: 100px;
-    text-align: justify;
+    padding-bottom: 100px;  
+    text-align: center;
 }
 
-#profile3 img{
-    padding-left: 450px;
+.profile2 img{
+    height: 206px;
 }
+
+/* #profile3 img{
+    padding-left: 520px;
+} */
+
+/* .profile1 > h2{
+    margin-left: 200px;
+}
+
+.profile2 > h2{
+    margin-left: 200px;
+} */
