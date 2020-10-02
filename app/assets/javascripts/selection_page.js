@@ -1,19 +1,11 @@
 $(document).ready(function(){
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-
-const optionsList = document.querySelectorAll(".option");
-if(selected){
-  selected.addEventListener("click", () => {
-    optionsContainer.classList.toggle("active");
+  $(".selected").on('click', function(){
+    $(".options-container").toggleClass('active');
   });
 
-  optionsList.forEach(o => {
-    o.addEventListener("click", () => {
-      selected.innerHTML = o.querySelector("label").innerHTML;
-      optionsContainer.classList.remove("active");
-      location.href = "/mechanics?location="+o.querySelector("label").innerHTML;
-    });
+  $(".option").on('click', function(){
+    $('.selected').html($(this).find('label').html());
+    $(".options-container").removeClass('active');
+    location.href = "/mechanics?location="+$(this).find('label').html();
   });
-}
 });
