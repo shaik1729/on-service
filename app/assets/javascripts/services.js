@@ -1,5 +1,5 @@
 $(document).ready(function(){
-const serviceitems = document.querySelectorAll('.service-item-wrapper')
+    var serviceitems = document.querySelectorAll('.service-item-wrapper')
     serviceitems.forEach(serviceitem => {
         serviceitem.addEventListener('mouseover', () => {
             console.log(serviceitem.childNodes[1].classList);
