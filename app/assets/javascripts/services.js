@@ -1,14 +1,8 @@
 $(document).ready(function(){
-    var serviceitems = document.querySelectorAll('.service-item-wrapper')
-    serviceitems.forEach(serviceitem => {
-        serviceitem.addEventListener('mouseover', () => {
-            console.log(serviceitem.childNodes[1].classList);
-            serviceitem.childNodes[1].classList.add('img-darken')
-        })
-
-        serviceitem.addEventListener('mouseout', () => {
-            console.log(serviceitem.childNodes[1].classList);
-            serviceitem.childNodes[1].classList.remove('img-darken')
-        })
-    })
+    $('.service-item-wrapper').on('mouseover', function(){
+        $(this).addClass('img-darken');
+    });
+    $('.service-item-wrapper').on('mouseout', function(){
+        $(this).removeClass('img-darken');
+    });
 });
