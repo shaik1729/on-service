@@ -19,9 +19,8 @@ ActiveRecord::Schema.define(version: 2020_09_26_164428) do
     t.text "specialization"
     t.string "gender"
     t.string "location", null: false
-    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }
-    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }
-    t.index ["id"], name: "id_UNIQUE", unique: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["mobile_number"], name: "index_mechanics_on_mobile_number", unique: true
   end
 

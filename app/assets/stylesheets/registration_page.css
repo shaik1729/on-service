@@ -36,7 +36,6 @@ h2 {
     border-radius: 3px;
     outline: 0;
     padding: 7px;
-    margin-left: 50px;
 }
 
 #ph {
@@ -47,12 +46,16 @@ h2 {
     outline: 0;
 }
 
-#num {
+.num {
     width: 330px;
     padding: 7px;
     border: none;
     border-radius: 3px;
     outline: 0;
+}
+
+#num {
+    width: 260px;
 }
 
 #sub {

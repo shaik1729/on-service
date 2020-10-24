@@ -1,0 +1,38 @@
+<header class="site-header">
+    <%= render partial: 'layouts/nav'%>
+    <div class="register">
+        <h2>Update Your Profile</h2>
+        <form method="post" id="register" action="login_page">
+            <label>New Name : </label><br>
+            <input type="name" name="name" class="num" placeholder="Enter your name"><br><br>
+            <label>New Mobile number : </label><br>
+            <select id="ph">
+                <option>+91</option>
+                <option>+92</option>
+                <option>+93</option>
+                <option>+94</option>
+                <option>+95</option>
+            </select>
+            <input type="number" name="MNum" class="num" id="num" placeholder="Enter your Mobile number"><br><br>
+            <label>New Email : </label><br>
+            <input type="Email" name="Email" class="num" placeholder="Enter your Email id"><br><br>
+            <label>Old Password : </label><br>
+            <input type="text/number" name="Password" class="num" placeholder="Enter your old password"><br><br>
+            <label>New Password : </label><br>
+            <input type="text/number" name="Password" class="num" placeholder="Enter your password"><br><br>
+            <label>Re-enter New Password : </label><br>
+            <input type="text/number" name="Password" class="num" placeholder="Conform password"><br><br>
+            <label>New Specialization: </label><br>
+            <textarea name="discripsion" class="num" cols="45" rows="10"></textarea><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>&nbsp;&nbsp;
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>&nbsp;&nbsp;
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+            <a href="/mechanic_set_loc_map">
+                <input type="submit" value="Next" id="sub"><br><br>
+            </a>
+        </form>
+    </div>
+</header>
