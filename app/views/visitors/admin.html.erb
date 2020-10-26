@@ -1,0 +1,178 @@
+<div class="overlay-scrollbar">
+	<div class="navbar-admin">
+		<ul class="navbar-admin-nav">
+			<li class="admin-nav-item">
+				<a class="nav-link">
+					<i class="fa fa-bars" onclick="collapseSidebar()"></i>
+				</a>
+			</li>
+			<li class="admin-nav-item">
+				<img src="https://w7.pngwing.com/pngs/386/441/png-transparent-car-bmw-porsche-automobile-repair-shop-corey-s-german-auto-repair-car-thumbnail.png" alt="ATPro logo-admin" class="logo-admin logo-admin-light">
+			</li>
+		</ul>
+
+		<form class="navbar-admin-search">
+			<input type="text" name="Search" class="navbar-admin-search-input" placeholder="What you looking for...">
+			<i class="fa fa-search"></i>
+		</form>
+
+		<ul class="navbar-admin-nav nav-right">
+			<li class="admin-nav-item avt-wrapper">
+				<div class="avt dropdown">
+					<img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+					<ul id="user-menu" class="dropdown-menu">
+						<li  class="dropdown-menu-item">
+							<a href="#" class="dropdown-menu-link">
+								<div>
+									<i class="fa fa-sign-out"></i>
+								</div>
+								<span>logout</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="sidebar">
+		<ul class="sidebar-nav">
+			<li class="sidebar-admin-nav-item">
+				<a href="#" class="sidebar-nav-link active">
+					<div>
+						<i class="fa fa-tachometer"></i>
+					</div>
+					<span>
+						Dashboard
+					</span>
+				</a>
+			</li>
+			<li class="sidebar-admin-nav-item">
+				<a href="#user-details-goto" class="sidebar-nav-link">
+					<div>
+						<i class="fa fa-user"></i>
+					</div>
+					<span>Users</span>
+				</a>
+			</li>
+			<li  class="sidebar-admin-nav-item">
+				<a href="#mechanic-details-goto" class="sidebar-nav-link">
+					<div>
+						<i class="fa fa-user"></i>
+					</div>
+					<span>Mechanics</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-primary">
+					<p>
+						<i class="fa fa-tasks"></i>
+					</p>
+					<h3>1</h3>
+					<a href="#user-details-goto" style="text-decoration: none; color: white">
+						<p>User Details</p>
+					</a>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-warning">
+					<p>
+						<i class="fa fa-tasks"></i>
+					</p>
+					<h3>1</h3>
+					<a href="#mechanic-details-goto" style="text-decoration: none; color: white">
+						<p>Mechanic Details</p>
+					</a>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-danger">
+					<p>
+						<i class="fa fa-bug"></i>
+					</p>
+					<h3>0</h3>
+					<p>Issues</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="user-details-goto">
+			<div class="col-8 col-m-12 col-sm-12">
+				<div class="admin-card">
+					<div class="admin-card-header">
+						<h3>
+							User Details Table
+						</h3>
+						<i class="fa fa-ellipsis-h"></i>
+					</div>
+					<div class="admin-card-content">
+						<table>
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Email id</th>
+									<th>Delete user</th>
+								</tr>
+							</thead>
+							<tbody>
+							<% User.all.each do |user| %>
+								<tr>
+									<td><%= user.id %></td>
+									<td><%= user.name %></td>
+									<td><%= user.email %></td>
+									<td>
+										<a href="#">remove user</a>
+									</td>
+								</tr>
+							<% end %>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="mechanic-details-goto">
+			<div class="col-8 col-m-12 col-sm-12">
+				<div class="admin-card">
+					<div class="admin-card-header">
+						<h3>
+							Mechanics Details Table
+						</h3>
+						<i class="fa fa-ellipsis-h"></i>
+					</div>
+					<div class="admin-card-content">
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Mobile number</th>
+									<th>Email id</th>
+									<th>Specialization</th>
+									<th>Gender</th>
+									<th>Delete User</th>
+								</tr>
+							</thead>
+							<tbody>
+								<% Mechanic.all.each do | mechanic | %>
+									<tr>
+										<td><%= mechanic.name %></td>
+										<td><%= mechanic.mobile_number %></td>
+										<td><%= mechanic.email %></td>
+										<td><%= mechanic.specialization %></td>
+										<td><%= mechanic.gender %></td>
+										<td><a href="#">remove user</a></td>
+									</tr>
+								<% end %>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

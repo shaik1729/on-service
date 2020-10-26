@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :mechanics
   get '/about_html_page' => 'visitors#about_html_page'
   get '/apps' => 'visitors#apps'
   get '/contact-us' => 'visitors#contact-us'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get '/mechanic_set_loc_map' => 'visitors#mechanic_set_loc_map'
   get '/mechanic_edit_profile' => 'visitors#mechanic_edit_profile'
   get '/mechanic_profile' => 'visitors#mechanic_profile'
+  get '/admin' => 'visitors#admin'
 
   root to: 'visitors#index'
   devise_for :users

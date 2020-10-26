@@ -30,7 +30,10 @@ h2 {
 
 .register #new_user input[type='text'], 
 .register #new_user input[type='email'], 
-.register #new_user input[type='password'] {
+.register #new_user input[type='password'],
+.register #new_mechanic input[type='text'], 
+.register #new_mechanic input[type='email'], 
+.register #new_mechanic input[type='password'] {
     width: 400px;
     border: none;
     border-radius: 3px;

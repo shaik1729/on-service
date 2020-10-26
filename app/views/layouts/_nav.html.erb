@@ -75,9 +75,25 @@
                 <li class="<%='active' if params[:controller] == 'visitors' && params[:action] == 'contact-us' %>"><a href="/contact-us"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
                 <% if user_signed_in? %>
                     <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+                <% elsif mechanic_signed_in? %>
+                    <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign out', destroy_mechanic_session_path, :method=>'delete' %></li>
                 <% else %>
-                    <li><i class="fa fa-sign-in" aria-hidden="true"></i><%= link_to 'Sign in', new_user_session_path %></li>
-                    <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign up', new_user_registration_path %></li>
+                    <li><i class="fa fa-sign-in" aria-hidden="true"></i><%= link_to 'Sign in', new_user_session_path %>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="/apps">User</a></li>
+                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="/apps">Mechanic</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign up', new_user_registration_path %>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><i class="fa fa-sign-out" aria-hidden="true"></i><a href="/apps">User</a></li>
+                            <li><i class="fa fa-sign-out" aria-hidden="true"></i><a href="/apps">Mechanic</a></li>
+                        </ul>
+                    </div>
+                    </li>
                 <% end %>
             </ul>
         </div>

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://w7.pngwing.com/pngs/386/441/png-transparent-car-bmw-porsche-automobile-repair-shop-corey-s-german-auto-repair-car-thumbnail.png"/>
     <title><%= content_for?(:title) ? yield(:title) : "On Service" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise Roles" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %> 
@@ -10,14 +11,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLHE8qSJpEe_1uZkimqIM9W3OJM5SXiNI&callback=initMap"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLHE8qSJpEe_1uZkimqIM9W3OJM5SXiNI.&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <%= yield %>

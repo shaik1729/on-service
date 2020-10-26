@@ -11,16 +11,22 @@
             <h2>Select User Type:</h2>
             <ul>
                 <li>
-                    <input type="radio" class="radio" value="mechanic" id="mechanic" name="usertype">
+                    <input type="radio" class="radio" value="mechanic" id="mechanic" name="usertype" checked>
                     <label for="mechanic">Mechanic</label>
                 </li>
                 <li>
                     <input type="radio" class="radio" value="user" id="user" name="usertype">
                     <label for="user">User</label>
                 </li>
-                <a href="/users/sign_up"><button>sign up</button></a>
+                <button id="signup-button">sign up</button>
                 <a href="/users/sign_in"><button>sign in</button></a>
             </ul>
         </div>
     </div>
 </section>
+<script type="text/javascript">
+        $("#signup-button").click(function(){
+            var usertype = $("input[name=usertype]:checked").val();
+            window.location.href = "<%= new_user_registration_url %>?role="+usertype;
+        });
+</script>

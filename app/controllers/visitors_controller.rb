@@ -7,4 +7,8 @@ class VisitorsController < ApplicationController
             @mechanics = Mechanic.all
         end
     end
+
+    def index
+        @mechanics = Mechanic.all
+    end
 end
