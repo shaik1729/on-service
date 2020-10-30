@@ -1,7 +1,7 @@
 let map, infoWindow;
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("mymap"), {
     center: { lat: 20.5937, lng: 78.9629 },
     zoom: 4,
   });
@@ -22,6 +22,8 @@ function initMap() {
           map.zoom = 18; 
           $("#mechanic_latitude").val(position.coords.latitude);
           $("#mechanic_longitude").val(position.coords.longitude);
+          // console.log(position.coords.latitude);
+          // console.log(position.coords.longitude);
           infoWindow.setPosition(pos);
           infoWindow.setContent("Location found.");
           infoWindow.open(map);

@@ -19,7 +19,7 @@
                     <label for="user">User</label>
                 </li>
                 <button id="signup-button">sign up</button>
-                <a href="/users/sign_in"><button>sign in</button></a>
+                <button id="signin-button">sign in</button>
             </ul>
         </div>
     </div>
@@ -27,6 +27,20 @@
 <script type="text/javascript">
         $("#signup-button").click(function(){
             var usertype = $("input[name=usertype]:checked").val();
-            window.location.href = "<%= new_user_registration_url %>?role="+usertype;
+            if(usertype == 'mechanic'){
+                window.location.href = "<%= new_mechanic_registration_url %>";
+            }else{
+                window.location.href = "<%= new_user_registration_url %>";
+            }
+            
+        });
+        $("#signin-button").click(function(){
+            var usertype = $("input[name=usertype]:checked").val();
+            if(usertype == 'mechanic'){
+                window.location.href = "<%= mechanic_session_url %>";
+            }else{
+                window.location.href = "<%= user_session_url %>";
+            }
+            
         });
 </script>

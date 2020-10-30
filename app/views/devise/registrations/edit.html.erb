@@ -1,14 +1,45 @@
+<% if resource_name == :mechanic %>
+<header class="site-header" id="form-bottom">
+    <%= render partial: 'layouts/nav' %>
+    <div class="register">
+      <h2>Edit <%= resource_name.to_s.humanize %></h2>
+      <%= devise_error_messages! %>
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
+        <label>Name:</label><br>
+        <%= f.text_field :name, :autofocus => true %><br/><br>
+        <label>Mobile number : </label><br>
+        <%= f.text_field :mobile_number, min: 10, max: 10, placeholder: 'Enter your mobile number' %><br><br>
+        <label>Email:</label><br/>
+        <%= f.email_field :email%><br><br>
+        <label>Password : </label><br>
+        <%= f.password_field :password, placeholder: "Enter your password" %><br><br>
+        <label>Re-enter Password : </label><br>
+        <%= f.password_field :password_confirmation, placeholder: "Enter your password" %><br><br>
+        <label>Select your location where your Mechanic shop is : click on pan to location </label>
+        <div id="mymap" style="height: 425px; margin-bottom: 20px; color: black;"></div>
+        <%= f.hidden_field :latitude %>
+        <%= f.hidden_field :longitude %>
+        <label>Specialization : </label><br>
+        <%= f.text_area:specialization, rows: 4, placeholder: 'Enter your specialization' %><br><br>
+        <label>Gender : </label><br>
+        <%= f.radio_button :gender, "male", checked: true %> <label>Male</label>
+        <%= f.radio_button :gender, "female" %> <label>Female</label><br/><br/>
+        <%= f.submit 'Update', class: 'center', id: 'sub'  %>
+      <% end %>
+    </div>
+</header>
+<% else %>
 <div class="authform">
   <h3>Edit <%= resource_name.to_s.humanize %></h3>
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
     <%= devise_error_messages! %>
     <div class="form-group">
       <%= f.label :name %>
-      <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+      <%= f.text_field :name, :autofocus => true %>
     </div>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.email_field :email, readonly: true %>
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
@@ -34,8 +65,4 @@
     <%= f.submit 'Update', :class => 'button right' %>
   <% end %>
 </div>
-<div class="authform">
-<h3>Cancel Account</h3>
-<p>Unhappy? We'll be sad to see you go.</p>
-<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right' %>
-</div>
+<% end %>

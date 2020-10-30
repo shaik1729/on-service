@@ -7,7 +7,7 @@
 					<img src="/assets/user1">
 				</div>
 				<div class="user-data">
-					<h2>Smith Alexander</h2>
+					<h2><%= current_mechanic.name %></h2>
 					<p>Engineering graduate in the department of <strong>MECH</strong><br>
 					<i class="fa fa-map-marker" aria-hidden="true"></i>  India
 					</p>
@@ -23,7 +23,7 @@
 			</div>
             <div class="tab-panel-main">
                 <ul class="tabs">
-					<li class="tab-link current" data-tab="Basic-detail">Edit Detail</li>
+					<%# <li class="tab-link current" data-tab="Basic-detail"><a href="<%= edit_mechanic_registration_path %>">Edit Detail</a></li> %>
 				</ul>
 				<div id="Detail" class="tab-content current">
 					<div class="skill-box">
@@ -40,8 +40,7 @@
 							<label>10 Year Experience</label></p>
 						</div>
 						<div class="desc">
-							Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+							<%= current_mechanic.specialization %>
 						</div>
 					</div>
 					<div class="detail-box">
@@ -51,11 +50,10 @@
 							<li>Contact No : </li>
 							<li>Email : </li>
 						</ul>
-						<ul class="ul-second">
-							
+						<ul class="ul-second">							
 							<li>India</li>
-							<li>9900990087</li>
-							<li>alex@gmail.com</li>
+							<li><%= current_mechanic.mobile_number %></li>
+							<li><%= current_mechanic.email %></li>
 						</ul>
 					</div>
 				</div>

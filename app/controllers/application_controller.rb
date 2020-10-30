@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    '/selection_page'
+    if resource.class.name == 'User'
+      '/user_display_loc_map' 
+    else resource.class.name == 'Mechanic'
+        '/mechanic_profile' 
+    end
   end
 end

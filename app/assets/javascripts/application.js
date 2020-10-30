@@ -16,5 +16,4 @@
 //= require bootstrap-sprockets
 //= require script
 //= require services
-//= require selection_page
 //= require_tree .

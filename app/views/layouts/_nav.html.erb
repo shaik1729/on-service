@@ -78,21 +78,21 @@
                 <% elsif mechanic_signed_in? %>
                     <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign out', destroy_mechanic_session_path, :method=>'delete' %></li>
                 <% else %>
-                    <li><i class="fa fa-sign-in" aria-hidden="true"></i><%= link_to 'Sign in', new_user_session_path %>
-                    <div class="sub-menu-1">
-                        <ul>
-                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="/apps">User</a></li>
-                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="/apps">Mechanic</a></li>
-                        </ul>
-                    </div>
+                    <li><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="<%= new_user_session_path %>">User</a></li>
+                                <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="<%= new_mechanic_session_path %>">Mechanic</a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li><i class="fa fa-sign-out" aria-hidden="true"></i><%= link_to 'Sign up', new_user_registration_path %>
-                    <div class="sub-menu-1">
-                        <ul>
-                            <li><i class="fa fa-sign-out" aria-hidden="true"></i><a href="/apps">User</a></li>
-                            <li><i class="fa fa-sign-out" aria-hidden="true"></i><a href="/apps">Mechanic</a></li>
-                        </ul>
-                    </div>
+                    <li><i class="fa fa-sign-out" aria-hidden="true"></i>Sign up
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><i class="fa fa-sign-out" aria-hidden="true"></i><a href="<%= new_user_registration_path %>">User</a></li>
+                                <li><i class="fa fa-sign-out" aria-hidden="true"></i><a href="<%= new_mechanic_registration_path %>">Mechanic</a></li>
+                            </ul>
+                        </div>
                     </li>
                 <% end %>
             </ul>

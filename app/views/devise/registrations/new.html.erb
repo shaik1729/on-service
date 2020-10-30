@@ -15,8 +15,8 @@
             <%= f.password_field :password, placeholder: "Enter your password" , required: true %><br><br>
             <label>Re-enter Password : </label><br>
             <%= f.password_field :password_confirmation, placeholder: "Enter your password" , required: true %><br><br>
-            <label>Select your location where your Mechanic shop is : click on pan to location and click on sign up </label>
-            <div id="map" style="height: 425px; margin-bottom: 20px; color: black;"></div>
+            <label>Select your location where your Mechanic shop is : click on pan to location</label>
+            <div id="mymap" style="height: 425px; margin-bottom: 20px; color: black;"></div>
             <%= f.hidden_field :latitude %>
             <%= f.hidden_field :longitude %>
             <label>Specialization : </label><br>
